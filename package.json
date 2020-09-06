@@ -1,0 +1,23 @@
+{
+  "name": "social_media_site",
+  "version": "1.0.0",
+  "description": "Social Media Web app for a weekend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aadi28/social_media_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aadi28/social_media_site/issues"
+  },
+  "homepage": "https://github.com/Aadi28/social_media_site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.3.5"
+  }
+}
