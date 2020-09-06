@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Aadi28/social_media_site#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.10.3",
     "sequelize": "^6.3.5"
   }
 }
