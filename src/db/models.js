@@ -26,8 +26,11 @@ const TITLE = {
 
 const users = db.define('user', {
     id: ID,
-    username: U_NAME
-
+    username: U_NAME,
+    password: {
+        type: Sequelize.DataTypes.STRING(10),
+        allowNull: false
+    }
 })
 
 const tweets = db.define('tweet', {

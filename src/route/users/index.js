@@ -1,5 +1,7 @@
 const { Router } = require('express')
 const {
+  login,
+  createUser,
   getUserById,
   getUserByUsername
 } = require('../../controllers/users')
@@ -25,6 +27,19 @@ route.get('/:id', async (req, res) => {
       error: 'User Not Found'
     })
   }
+})
+
+route.post('/', async (req, res) => {
+  const user = await createUser(req.body.username, req.body.password)
+  res.status(201).send(user)
+})
+
+route.post('/login', async (req, res) => {
+  const status = await login(req.body.username, req.body.password)
+  if (status == 200)
+    res.status(200).redirect(`http://localhost:5555/users/:id=${res.body.username}`)
+  else
+    res.status(status).redirect('http://localhost:5555/')
 })
 
 module.exports = {

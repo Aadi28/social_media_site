@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/Aadi28/social_media_site#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.3",
+    "mysql2": "^2.1.0",
     "sequelize": "^6.3.5"
   }
 }
