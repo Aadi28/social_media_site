@@ -1,8 +1,23 @@
 const { users } = require('../db/models')
 const bcrypt = require('bcrypt')
 
-async function login() {
-
+async function login(username, password) {
+    const user = await users.findOne({ where: { username } })
+    if (user == null) {
+        return 404
+    }
+    try {
+        if (await bcrypt.compare(password, user.password)) {
+            return 200
+        }
+        else {
+            return 401
+        }
+    }
+    catch (err) {
+        console.error("Error: ", err);
+        return 404;
+    }
 }
 async function createUser(username, password) {
     try {
